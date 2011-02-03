@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name:               POD2-ES
-version:            5.12.3.01_1
-abstract:           Documentación de Perl en español / Spanish translation of Perl
+version:            5.12.3.01_2
+abstract:           Documentación de Perl en español
 author:
     - Equipo de Perl en Español
 license:            perl
