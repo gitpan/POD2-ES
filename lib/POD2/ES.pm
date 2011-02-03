@@ -5,7 +5,7 @@ use strict;
 use utf8;
 use base 'POD2::Base';
 
-our $VERSION = '5.12.3.01_2';
+our $VERSION = '5.12.3.01_3';
 
 my $pods = {
     perlintro   => '5.12.3',
@@ -67,7 +67,7 @@ consultar la documentación:
 
   %> perldoc POD2::ES::<nombre_de_pod>
 
-=head1 EXTENSIÓN DE perldoc
+=head1 ACTUALIZACIÓN DE perldoc
 
 Por desgracia, los útiles modificadores C<-f> y C<-q> de C<perldoc> no
 funcionan con la documentación traducida.
@@ -93,8 +93,7 @@ para no tener que escribir el modificador C<-L> cada vez:
  
 Puede aplicar la revisión con la línea siguiente: 
 
-  %> patch -p0 `/ruta_de_perl -MPod::Perldoc -e 'print
-$INC{"Pod/Perldoc.pm"}'` < /ruta/Perldoc.pm-3.14-patch
+  %> patch -p0 `/ruta_de_perl -MPod::Perldoc -e 'print $INC{"Pod/Perldoc.pm"}'` < /ruta/Perldoc.pm-3.14-patch
 
 La revisión se incluye con esta distribución y se encuentra en
 F<./patches/Perldoc.pm-3.14-patch>.
@@ -165,8 +164,60 @@ L<http://github.com/zipf/perldoc-es>.
 
 =head1 AUTORES
 
-=item * Joaquín Ferrero  C< explorer at joaquinferrero.com >
-=item * Enrique Nell  C< blas.gordon at gmail.com E<gt >
+=over
+
+=item * Joaquín Ferrero, C< explorer at joaquinferrero.com >
+
+=item * Enrique Nell, C< blas.gordon at gmail.com >
+
+=back
+
+=head1 NOTAS SOBRE LA TRADUCCIÓN
+
+Para este proyecto hemos tomado las siguientes decisiones:
+
+=over
+
+=item * No utilizar caracteres acentuados en los nombres de variables y
+funciones de los ejemplos de código
+
+Es perfectamente posible utilizarlos, (solo hay que codificar el programa
+como UTF-8 y agregar "use utf8;" al principio), pero teniendo en mente a
+ese programador más impulsivo, que valora su tiempo y no quiere perderse en
+reflexiones ni verse encorsetado por las normas del lenguaje, creemos que
+así resultará más fácil probar el código de los ejemplos.
+
+Por otra parte, en aquellos sistemas que cuenten con un sistema antiguo de
+visualización de texto, como los terminales de línea de comandos, es posible
+que se pierdan los acentos. En la mayor parte de los casos será debido
+a la presencia de una versión de groff (programa utilizado por los comandos
+man y perldoc) que no admite dichos caracteres. En la documentación
+HTML no debería haber problemas.
+
+
+=item * No traducir los términos "array" y "hash"
+
+Si tenemos en cuenta que Perl tiene más de 20 años y que la inmensa mayoría
+de los libros disponibles sobre este lenguaje están en inglés, a nadie extrañará
+que la comunidad de habla hispana se refiera a estos tipos de datos por su
+nombre en inglés. Existen posibles traducciones, como "matriz", "lista" o
+"arreglo" para "array", o "diccionario" para "hash", pero su uso no se ha
+extendido, por lo que hemos preferido utilizar su nombre original.
+Creemos que esto facilitará la lectura de la documentación.
+
+
+=item * Utilizar "español neutro"
+
+El "español neutro" es un español controlado que pretende evitar el uso de
+términos ofensivos o de construcciones poco frecuentes en determinados países
+de habla hispana, con el objetivo de lograr traducciones válidas para 
+España y Latinoamérica.
+
+=back
+
+=head1 REFERENCIAS
+
+Proyecto OmegaT: L<http://omegat.org/>
 
 
 =head1 VEA TAMBIÉN
@@ -215,6 +266,8 @@ L<http://search.cpan.org/dist/POD2-ES/>
 
 =head1 AGRADECIMIENTOS
 
+Los autores desean expresar su agradecimiento al equipo de desarrollo
+de OmegaT, la herramienta utilizada para la traducción.
 
 =head1 LICENCIA Y COPYRIGHT
 

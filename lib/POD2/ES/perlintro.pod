@@ -190,12 +190,11 @@ número de elementos del array:
 
 Los nombres de los elementos que obtenemos del array empiezan por C<$>
 porque reciben valores individuales del array; si se pide un escalar, se
-obtiene un escalar. Para obtener varios valores de un array:
+obtiene un escalar. Para obtener varios elementos de un array:
 
     @animales[0,1];  # devuelve ("camello", "llama");
     @animales[0..2];  # devuelve ("camello", "llama", "búho");
-    @animales[1..$#animales];  # devuelve todos los elementos excepto el
-primero
+    @animales[1..$#animales];  # devuelve todos excepto el primero
 
 Esto se denomina una "porción de array". Puede hacer varias cosas útiles
 con las listas:
@@ -441,7 +440,7 @@ alfabéticamente (100 es anterior a
 
 (En la tabla anterior C<and>, C<or> y C<not> no son solo descripciones de
 los operadores. Son también operadores. Ofrecen más legibilidad que los
-operadores tipo C (C<&&>, etc.) correspondientes, pero su precedencia es
+operadores tipo C correspondientes, como C<&&>, pero su precedencia es
 distinta. Consulte L<perlop> para obtener más información.)
 
 =item Otros operadores
@@ -529,7 +528,7 @@ operador de enlace C<=~>
 
     s/foo/bar/;  # reemplaza foo con bar en $_
     $a =~ s/foo/bar/;  # reemplaza foo con bar en $a
-    a =~ s/foo/bar/g;  # reemplaza TODAS las coincidencias de foo por bar
+    $a =~ s/foo/bar/g;	# reemplaza todas las coincidencias de foo por bar
 en $a
 
 El operador de sustitución, C<s///>, se describe en L<perlop>.
@@ -542,15 +541,15 @@ complejas. Estas se describen de forma detallada en L<perlre>. A
 continuación se incluye una guía rápida:
 
     .			un solo carácter
-    \s			un carácter de espacio en blanco (espacio,
-tabulación, nueva línea, ...)
+    \s			un espacio en blanco (espacio, tabulación, nueva
+línea, ...)
     \S			un carácter que no sea un espacio en blanco
     \d			un dígito (0-9)
     \D			un carácter que no sea un dígito
     \w			un carácter de palabra (a-z, A-Z, 0-9, _)
     \W			un carácter que no sea de palabra
     [aeiou]		un solo carácter del conjunto especificado
-    [^aeiou]		un solo carácter que no pertenezca al conjunto
+    [^aeiou]		un solo carácter no perteneciente al conjunto
 especificado
     (foo|bar|baz)	cualquiera de las alternativas especificadas
 
@@ -613,9 +612,9 @@ Es fácil escribir subrutinas:
 
     sub registrador {
 	my $mensaje_registro = shift;
-	open my $archivo_registro, ">>", "mi.registro" or die "No se pudo
-abrir mi.registro: $!";
-	print $archivo_registro $mensaje_registro;
+	open my $registro, ">>", "mi.registro" or die "No se pudo abrir
+mi.registro: $!";
+	print $registro $mensaje_registro;
     }
 
 Ahora podemos usar la subrutina como cualquier función integrada:
@@ -687,5 +686,10 @@ Kirrily "Skud" Robert <skud@cpan.org>
 
 =head1 TRADUCTORES
 
-=item * Joaquín Ferrero  C< explorer at joaquinferrero.com >
-=item * Enrique Nell  C< blas.gordon at gmail.com E<gt >
+=over
+
+=item * Joaquín Ferrero, C< explorer at joaquinferrero.com >
+
+=item * Enrique Nell, C< blas.gordon at gmail.com >
+
+=back
