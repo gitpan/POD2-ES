@@ -24,10 +24,10 @@ Para este proyecto hemos tomado las siguientes decisiones:
 * No utilizar caracteres acentuados en los nombres de variables y
 funciones de los ejemplos de código
 
-Es perfectamente posible utilizarlos, (solo hay que codificar el programa
+Es perfectamente posible utilizarlos (solo hay que codificar el programa
 como UTF-8 y agregar "use utf8;" al principio), pero teniendo en mente a
 ese programador más impulsivo, que valora su tiempo y no quiere perderse en
-reflexiones ni verse encorsetado por las normas del lenguaje, creemos que
+reflexiones ni verse encorsetado por las normas de la lengua, creemos que
 así resultará más fácil probar el código de los ejemplos.
 
 Por otra parte, en aquellos sistemas que cuenten con un sistema antiguo de

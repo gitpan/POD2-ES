@@ -86,7 +86,7 @@ de Perl deben terminar con un signo de punto y coma:
 
     print "Hola a todos";
 
-Los comentarios comienzan con un símbolo # y van hasta el final de la línea
+Los comentarios comienzan con un símbolo # y van hasta el final de la línea:
 
     # Esto es un comentario
 
@@ -303,8 +303,8 @@ ejecución del programa. Es muy recomendable usar C<strict>.
 
 Perl ofrece las estructuras condiciones y de bucle habituales. En Perl
 5.10, incluso ofrece una instrucción case/switch (llamada
-C<given>/C<when>). Consulte 
-L<perlsyn/"Instrucciones switch"> para obtener información detallada. Una
+C<given>/C<when>). Consulte "Instrucciones switch" en 
+L<perlsyn> para obtener información detallada. Una
 condición puede ser cualquier expresión Perl. Consulte la lista de
 operadores de la siguiente sección para obtener información sobre los
 operadores lógicos booleanos y de comparación que se suelen usar en
@@ -336,7 +336,7 @@ inglés:
 
     # la manera tradicional
     if ($zippy) {
-	print "'¡Caramba!";
+	print "¡Caramba!";
     }
 
     # ahora con una condición posterior, al estilo Perl
@@ -465,12 +465,9 @@ La función C<open()> abre un archivo para entrada o salida.
 Esta función se describe de forma muy detallada en L<perlfunc> y
 L<perlopentut>. A continuación se muestra un resumen de cómo se usa:
 
-    open(my $entrada,  "<",  "entrada.txt")  or die "No se puede abrir
-entrada.txt: $!";
-    open(my $salida, ">",  "salida.txt") or die "No se puede abrir
-salida.txt: $!";
-    open(my $registro, ">>", "mi.registro")	or die "No se puede abrir
-mi.registro: $!";
+    open(my $entrada,  "<",  "entrada.txt")  or die "No se puede abrir entrada.txt: $!";
+    open(my $salida, ">",  "salida.txt") or die "No se puede abrir salida.txt: $!";
+    open(my $registro, ">>", "mi.registro")	or die "No se puede abrirmi.registro: $!";
 
 Puede utilizar el operador C<< <> >> para leer de un identificador de
 archivo abierto. En contexto escalar, este operador lee una sola línea del
@@ -486,7 +483,7 @@ de las tareas de procesamiento de archivos de texto se puede hacer de línea
 en línea con las estructuras de bucle de Perl. El operador C<< <> >> se
 suele utilizar en un bucle C<while>:
 
-    while (<$in>) {	# asigna una línea cada vez a $_
+    while (<$entrada>) {	# asigna una línea cada vez a $_
 	print "Acabo de leer esta línea: $_";
     }
 
@@ -526,10 +523,9 @@ operador de enlace C<=~>
 
 =item Sustitución simple
 
-    s/foo/bar/;  # reemplaza foo con bar en $_
-    $a =~ s/foo/bar/;  # reemplaza foo con bar en $a
-    $a =~ s/foo/bar/g;	# reemplaza todas las coincidencias de foo por bar
-en $a
+    s/foo/bar/;  # reemplaza foo por bar en $_
+    $a =~ s/foo/bar/;  # reemplaza foo por bar en $a
+    $a =~ s/foo/bar/g;	# reemplaza todas las coincidencias de foo por bar en $a
 
 El operador de sustitución, C<s///>, se describe en L<perlop>.
 
@@ -573,7 +569,7 @@ Algunos ejemplos breves:
     /^\d+/		cadena que empieza por uno o varios dígitos
     /^$/		cadena vacía (principio y final contiguos)
     /(\d\s){3}/ 	tres dígitos, cada uno seguido de un espacio
-			carácter (p. ej., "3 4 5 ")
+			(p. ej., "3 4 5 ")
     /(a.)+/		cadena en la que cada letra impar
 			es "a" (p. ej., "abacadaf")
 
@@ -612,9 +608,8 @@ Es fácil escribir subrutinas:
 
     sub registrador {
 	my $mensaje_registro = shift;
-	open my $registro, ">>", "mi.registro" or die "No se pudo abrir
-mi.registro: $!";
-	print $registro $mensaje_registro;
+	open my $reg, ">>", "mi.reg" or die "No se pudo abrir mi.reg: $!";
+	print $reg $mensaje_registro;
     }
 
 Ahora podemos usar la subrutina como cualquier función integrada:
@@ -629,8 +624,8 @@ Así, C<my $mensaje_registro= shift;> quita el primer elemento de la lista
 de argumentos y se lo asigna a C<$mensaje_registro>. También podemos
 manipular C<@_> de otras maneras:
 
-    my ($mensaje_registro, $prioridad) = @_;  # común
-    my $mensaje_registro = $_[0];	# poco común (y poco estético)
+    my ($mensaje_registro, $prioridad) = @_; # común
+    my $mensaje_registro = $_[0];	     # poco común (y poco estético)
 
 Las subrutinas también pueden devolver valores:
 
@@ -672,7 +667,7 @@ L<perlmodinstall>. Para aprender a usar un módulo específico, ejecute
 C<perldoc I<Nombre::Módulo>>.
 Normalmente agregará a su programa la línea C<use I<Nombre::Módulo>>, que
 le proporcionará acceso a las funciones exportadas o a una interfaz
-orientada objetos del módulo. L<perlfaq> contiene preguntas y respuestas
+orientada a objetos del módulo. L<perlfaq> contiene preguntas y respuestas
 relacionadas con muchas tareas comunes, y en muchos casos sugiere los
 módulos de CPAN adecuados para cada tarea. En L<perlmod> se describen los
 módulos de Perl en general. L<perlmodlib> enumera los módulos
