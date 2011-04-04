@@ -1,6 +1,10 @@
 Revision history for Perl extension POD2::ES
 
 
+5.12.3.05  April 4, 2011
+
+           * Added perlfaq1.pod to the MANIFEST...
+
 5.12.3.04  April 4, 2011
 
            * Added the translation of perlfaq1.pod
