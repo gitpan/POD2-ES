@@ -5,10 +5,10 @@ perlintro -- Breve introducción y descripción general de Perl
 =head1 DESCRIPCIÓN
 
 Este documento proporciona una introducción rápida al lenguaje de programación
-Perl e incluye referencias a documentación adicional. Es una guía de iniciación
-para los nuevos usuarios del lenguaje que proporciona la información necesaria
-para poder leer el código Perl de otras personas y comprender a grandes rasgos
-su funcionamiento, o para escribir scripts sencillos.
+Perl e incluye referencias a documentación adicional. Es una guía de
+iniciación para los nuevos usuarios del lenguaje que proporciona la información
+necesaria para poder leer el código Perl de otras personas y comprender a
+grandes rasgos su funcionamiento, o para escribir scripts sencillos.
 
 Es un documento introductorio, no una guía completa. Tampoco explica el
 lenguaje en detalle. En algunos casos se ha sacrificado la precisión para
@@ -19,6 +19,24 @@ contenido se encuentra en L<perltoc>.
 En este documento se incluyen referencias a otras partes de la documentación de
 Perl. Puede consultar la documentación mediante el comando C<perldoc> o
 cualquier otro método que use para leer este documento.
+
+En la documentación de Perl se incluyen muchos ejemplos que ilustran las
+características descritas. Tenga en cuenta que muchos de estos ejemplos son
+fragmentos de código, no programas completos.
+
+Los ejemplos de las distintas partes de la documentación reflejan el estilo y
+las preferencias de sus autores, y pueden ser más escuetos que una línea de
+código equivalente en un programa real. Salvo si se indica lo contrario, debe
+suponer que al principio del "programa" se incluyen las instrucciones C<use
+strict> y C<use warnings>, y que todas las variables han sido declaradas,
+aunque se omitan las declaraciones para facilitar la lectura del ejemplo.
+
+Tenga en cuenta que los ejemplos han sido escritos por muchos autores distintos
+a lo largo de varias décadas. Por esta razón, habrá diversos estilos y
+técnicas, pero se ha procurado que en una misma sección los estilos no varíen
+demasiado. Ningún estilo es mejor que otro. No olvide que uno de los lemas de
+Perl es "Se puede hacer de varias maneras". Al fin y al cabo, en su vida
+profesional como programador se va a encontrar distintos estilos.
 
 =head2 ¿Qué es Perl?
 
@@ -155,19 +173,19 @@ Los valores escalares se pueden usar de varias maneras:
 
 Hay varios escalares "mágicos" con nombres que recuerdan conjuntos de signos de
 puntuación (o "ruido de señal"). Estas variables especiales se usan para
-diversos fines y se describen en L<perlvar>. La única que tiene que conocer por
-ahora es C<$_>, la "variable predeterminada". Se usa como argumento
+diversos fines y se describen en L<perlvar>. La única que tiene que conocer
+por ahora es C<$_>, la "variable predeterminada". Se usa como argumento
 predeterminado de varias funciones de Perl y su valor se establece
 implícitamente en determinadas estructuras de bucle.
 
-    print;    # imprime el contenido de $_ de manera predeterminada
+    print;          # imprime el contenido de $_ de manera predeterminada
 
 =item Arrays
 
 Un array representa una lista de valores:
 
     my @animales = ("camello", "llama", "búho");
-    my @numeros  = (23, 42, 69);
+    my @numeros = (23, 42, 69);
     my @mezcla   = ("camello", 42, 1.23);
 
 El índice de un array empieza en cero. Para obtener los elementos de un array:
@@ -181,9 +199,9 @@ array:
     print $mezcla[$#mezcla];  # último elemento, imprime 1.23 en pantalla
 
 Podría sentirse tentado de usar C<$#array + 1> para determinar el número de
-elementos de un array. No es necesario. Si utiliza C<@array> donde Perl espera
-encontrar un valor escalar ("en contexto escalar"), obtendrá el número de
-elementos del array:
+elementos de un array. No es necesario. Si utiliza C<@array> donde Perl
+espera encontrar un valor escalar ("en contexto escalar"), obtendrá el número
+de elementos del array:
 
     if (@animales < 5) { ... }
 
@@ -193,19 +211,19 @@ escalar.
 
 Para obtener varios elementos de un array:
 
-    @animales[0,1];            # devuelve ("camello", "llama");
-    @animales[0..2];           # devuelve ("camello", "llama", "búho");
+    @animales[0,1];  # devuelve ("camello", "llama");
+    @animales[0..2];  # devuelve ("camello", "llama", "búho");
     @animales[1..$#animales];  # devuelve todos excepto el primero
 
 Esto se denomina una "porción de array".
 
 Puede hacer varias cosas útiles con las listas:
 
-    my @ordenados     = sort @animales;
+    my @ordenados    = sort @animales;
     my @orden_inverso = reverse @numeros;
 
 También hay dos arrays especiales: C<@ARGV> (los argumentos de línea de
-comandos pasados al script) y C<@_> (los argumentos pasados a una subrutina).
+comandos pasados al script) y C<@_> (los argumentos pasados a una subrutina). 
 Se describen en L<perlvar>.
 
 =item Hashes
@@ -218,7 +236,7 @@ Puede usar espacio en blanco y el operador C<< => >> para expresarlos de manera
 más clara:
 
     my %color_fruta = (
-        manzana => "rojo",
+        manzana=> "rojo",
         plátano => "amarillo",
     );
 
@@ -229,14 +247,14 @@ Para obtener los elementos de un hash:
 Puede obtener una lista de las claves y los valores con C<keys()> y 
 C<values()> respectivamente.
 
-    my @frutas  = keys %colores_fruta;
+    my @frutas = keys %colores_fruta;
     my @colores = values %colores_fruta;
 
 En los hashes no hay un orden interno específico, aunque puede ordenar las
 claves antes de recorrerlas en un bucle.
 
 De la misma manera que hay escalares y arrays especiales, también hay hashes
-especiales. El más conocido es C<%ENV>, que contiene variables de entorno.
+especiales. El más conocido es C<%ENV>, que contiene variables de entorno. 
 Encontrará información sobre este hash (y sobre otras variables especiales) en 
 L<perlvar>.
 
@@ -256,20 +274,20 @@ la que se usan referencias de hash anónimas.
 
     my $variables = {
         escalar  =>  {
-                     descripcion => "elemento individual",
-                     sigil => '$',
+                     descripcion => "elemento invidivual",
+                     sigilo => '$',
                     },
         array   =>  {
                      descripcion => "lista ordenada de elementos",
-                     sigil => '@',
+                     sigilo => '@',
                     },
         hash    =>  {
                      descripcion => "pares clave-valor",
-                     sigil => '%',
+                     sigilo => '%',
                     },
     };
 
-    print "Los escalares empiezan por $variables->{'scalar'}->{'sigil'}\n";
+    print "Los escalares empiezan por $variables->{'escalar'}->{'sigilo'}\n";
 
 Encontrará información detallada sobre las referencias en L<perlreftut>,
 L<perllol>, L<perlref> y L<perldsc>.
@@ -301,15 +319,16 @@ de instrucciones entre llaves) en el que se definen.
 
 Si escribe C<use strict;> al principio de los scripts de Perl y usa C<my>, el
 intérprete detectará determinados errores frecuentes de programación. Así, en
-el ejemplo anterior, la última instrucción C<print $y> provocará un error en
+el ejemplo anterior, la última instrucción C<print $y> provocará una error en
 tiempo de compilación que impedirá la ejecución del programa. Es muy
 recomendable usar C<strict>.
 
 =head2 Estructuras condicionales y de bucle
 
 Perl ofrece las estructuras condiciones y de bucle habituales. En Perl 5.10,
-incluso ofrece una instrucción case/switch (llamada C<given>/C<when>). Consulte
-"Instrucciones switch" en L<perlsyn> para obtener información detallada.
+incluso ofrece una instrucción case/switch (llamada C<given>/C<when>). 
+Consulte "Instrucciones switch" en L<perlsyn> para obtener información
+detallada.
 
 Una condición puede ser cualquier expresión Perl. Consulte la lista de
 operadores de la siguiente sección para obtener información sobre los
@@ -395,9 +414,9 @@ Para obtener más información sobre las estructuras de bucle (y otras
 estructuras que no se han mencionado en esta introducción ), consulte
 L<perlsyn>.
 
-=head2 Funciones y operadores integrados
+=head2 Funciones y operadores predefinidos
 
-Perl incluye una amplia selección de funciones y operadores integrados. Ya
+Perl incluye una amplia selección de funciones y operadores predefinidos. Ya
 hemos visto algunas funciones, como C<print>, C<sort> y C<reverse>. Al
 principio de L<perlfunc> se incluye una lista completa de funciones. También
 puede obtener fácilmente información sobre cualquier función mediante el
@@ -470,9 +489,9 @@ La función C<open()> abre un archivo para entrada o salida. Esta función se
 describe de forma muy detallada en L<perlfunc> y L<perlopentut>. A continuación
 se muestra un resumen de cómo se usa:
 
-    open(my $entrada,  "<",  "entrada.txt") or die "No se puede abrir entrada.txt: $!";
-    open(my $salida,   ">",  "salida.txt")  or die "No se puede abrir salida.txt: $!";
-    open(my $registro, ">>", "mi.registro") or die "No se puede abrir mi.registro: $!";
+    open(my $entrada,  "<",  "entrada.txt")  or die "No se puede abrir entrada.txt: $!";
+    open(my $salida, ">",  "salida.txt") or die "No se puede abrir salida.txt: $!";
+    open(my $registro, ">>", "mi.registro")     or die "No se puede abrir mi.registro: $!";
 
 Puede utilizar el operador C<< <> >> para leer de un identificador de archivo
 abierto. En contexto escalar, este operador lee una sola línea del
@@ -519,14 +538,14 @@ otros. Se incluye a continuación un resumen:
     if (/foo/)       { ... }  # verdadero si $_ contiene "foo"
     if ($a =~ /foo/) { ... }  # verdadero si $a contiene "foo"
 
-El operador de detección de coincidencias C<//> se describe en L<perlop>. Opera
-en C<$_> de manera predeterminada, o se puede enlazar a otra variable con el
-operador de enlace C<=~> (que también se describe en L<perlop>).
+El operador de detección de coincidencias C<//> se describe en L<perlop>. 
+Opera en C<$_> de manera predeterminada, o se puede enlazar a otra variable con
+el operador de enlace C<=~> (que también se describe en L<perlop>).
 
 =item Sustitución simple
 
-    s/foo/bar/;         # reemplaza foo por bar en $_
-    $a =~ s/foo/bar/;   # reemplaza foo por bar en $a
+    s/foo/bar/;  # reemplaza foo por bar en $_
+    $a =~ s/foo/bar/;  # reemplaza foo por bar en $a
     $a =~ s/foo/bar/g;  # reemplaza todas las coincidencias de foo por bar en $a
 
 El operador de sustitución, C<s///>, se describe en L<perlop>.
@@ -568,7 +587,7 @@ Algunos ejemplos breves:
     /^\d+/              cadena que empieza por uno o varios dígitos
     /^$/                cadena vacía (principio y final contiguos)
     /(\d\s){3}/         tres dígitos, cada uno seguido de un espacio
-                        (p. ej., "3 4 5 ")
+              	(p. ej. "3 4 5 ")
     /(a.)+/             cadena en la que cada letra impar
                         es "a" (p. ej., "abacadaf")
 
@@ -580,10 +599,9 @@ Algunos ejemplos breves:
 
 =item Paréntesis de captura
 
-Además de para agrupar, los paréntesis también se pueden usar para capturar los
-resultados de partes de una expresión regular a fin de usarlos posteriormente.
-
-Los resultados se almacenan en C<$1>, C<$2>, etc.
+Además de para agrupar, los paréntesis también se pueden usar para capturar
+los resultados de partes de una expresión regular a fin de usarlos
+posteriormente. Los resultados se almacenan en C<$1>, C<$2>, etc.
 
     # manera rápida de descomponer una dirección de correo electrónico
 
@@ -595,7 +613,7 @@ Los resultados se almacenan en C<$1>, C<$2>, etc.
 =item Otras características de las expresiones regulares
 
 Las expresiones regulares de Perl también ofrecen referencias a capturas
-previas, inspección hacia adelante, y muchas otras funcionalidades complejas.
+previas, inspección hacia adelante, y muchas otras funcionalidades complejas. 
 Encontrará más información en L<perlrequick>, L<perlretut> y L<perlre>.
 
 =back

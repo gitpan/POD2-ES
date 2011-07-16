@@ -2,7 +2,7 @@
 
 perlfaq1 - Preguntas generales sobre Perl
 
-=head1 DESCRIPCIÓN
+=head1 DESCRIPCIÓN 
 
 En esta sección de las preguntas más frecuentes se proporcionan respuestas a
 preguntas muy generales sobre Perl.
@@ -31,22 +31,22 @@ dieron lugar a la política de distribución libre y abierta de perl. El soporte
 de Perl lo ofrecen sus usuarios. El núcleo, la biblioteca Perl estándar, los
 módulos opcionales y esta documentación han sido desarrollados por voluntarios.
 Para obtener más información, consulte la nota personal que se incluye al final
-del archivo README de la distribución del código fuente de perl. En L<perlhist>
-(nuevo desde la versión 5.005) está registrado el historial de lanzamiento de
-versiones de Perl.
+ del archivo README de la distribución del código fuente de perl. En
+L<perlhist> (nuevo desde la versión 5.005) está registrado el historial de
+lanzamiento de versiones de Perl.
 
 En concreto, el núcleo del equipo de desarrollo (denominado Perl Porters) está
 integrado por un grupo variopinto de personas de gran altruismo, dedicadas a
-producir gratuitamente software de mejor calidad que el se podría obtener
+producir gratuitamente software de mejor calidad que el que se podría obtener
 pagando. Si desea curiosear los desarrollos pendientes, puede consultar el
-archivo mensajes de la lista de correo en 
+archivo mensajes de la lista de correo en
 http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/ y
 http://archive.develooper.com/perl5-porters@perl.org/, o el grupo de noticias
 nntp://nntp.perl.org/perl.perl5.porters (también está disponible a través de
 una interfaz web en http://nntp.perl.org/group/perl.perl5.porters), o bien leer
 las preguntas más frecuentes en http://dev.perl.org/perl5/docs/p5p-faq.html.
 También puede suscribirse a la lista de correo enviando una solicitud de
-suscripción a perl5-porters-subscribe@perl.org (solo tiene que enviar un
+suscripción a  perl5-porters-subscribe@perl.org (solo tiene que enviar un
 mensaje vacío sin asunto).
 
 Aunque el proyecto GNU incluye Perl en sus distribuciones, no existe "GNU
@@ -65,8 +65,8 @@ más información.
 
 Esto suele ser una cuestión de opinión y gusto, y no hay una respuesta
 definitiva para todos. En general, conviene usar la versión estable actual o la
-versión estable inmediatamente anterior. En la actualidad, éstas son perl5.12.x
-y perl5.10.x respectivamente.
+versión estable inmediatamente anterior. En la actualidad, éstas son perl5.14.x
+y perl5.12.x respectivamente.
 
 Si desea usar otras versiones, para decidir cuál es la que más le conviene debe
 tener en cuenta varias cosas, como las siguientes:
@@ -90,8 +90,8 @@ por lo que le costará menos encontrar ayuda para estas versiones.
 =item *
 
 En las versiones anteriores a perl5.004 había problemas de seguridad graves con
-desbordamiento del búfer y, en algunos casos, notificaciones del CERT (por ejemplo,
-http://www.cert.org/advisories/CA-1997-17.html).
+desbordamiento del búfer y, en algunos casos, notificaciones del CERT (por
+ejemplo, http://www.cert.org/advisories/CA-1997-17.html).
 
 =item *
 
@@ -107,15 +107,17 @@ actuales.
 
 =item *
 
-Actualmente nadie ofrece soporte para Perl 4 de forma activa. Hace cinco años
+Actualmente nadie ofrece soporte para Perl 4 de forma activa. Hace diez años
 era un camello muerto (según este documento). Ahora, sus huesos pelados, rotos
 o erosionados, solo se asemejan vagamente a un esqueleto.
 
 =item *
 
 Aún no está prevista una fecha de lanzamiento de Perl 6. La nueva versión
-estará disponible cuando llegue el momento. Puede seguir su desarrollo, pero no
-debe preocuparse por tener que actualizar Perl; nadie va a quitarle Perl 5.
+estará disponible cuando llegue el momento. Decimos en broma que saldrá en
+Navidad, pero no confirmamos el año de lanzamiento. Puede seguir su desarrollo,
+pero no debe preocuparse por tener que actualizar Perl; nadie va a quitarle
+Perl 5.
 
 =item *
 
@@ -137,10 +139,10 @@ impar (p. ej., perl5.9.x, donde 9 es la versión secundaria).
 Se puede resumir de la siguiente manera: Perl 4 es el pasado, Perl 5 es el
 presente y Perl 6 es el futuro.
 
-El número que va detrás de Perl (el 5 de Perl 5) es la versión principal del 
-intérprete de Perl (es decir, perl), así como la versión del lenguaje. Cada 
-versión principal incorpora diferencias importantes que no son compatibles 
-con las versiones anteriores.
+El número que va detrás de Perl (el 5 de Perl 5) es la versión principal del
+intérprete de Perl (es decir, perl), así como la versión del lenguaje. Cada
+versión principal incorpora diferencias importantes que no son compatibles con
+las versiones anteriores.
 
 La versión principal actual de Perl es Perl 5, y se lanzó en 1994. Permite
 ejecutar scripts de la versión principal anterior, Perl 4 (lanzada en marzo de
@@ -148,16 +150,17 @@ ejecutar scripts de la versión principal anterior, Perl 4 (lanzada en marzo de
 estructuras de datos complejas y módulos. El intérprete de Perl 5 fue una
 reescritura completa del código fuente de perl.
 
-Perl 6 es la siguiente versión principal de Perl, pero su sintaxis y su diseño
-aún están en fase de desarrollo. El trabajo se inició en 2002 y sigue en curso.
-Muchas de las características más interesantes de Perl 6 se han incluido en las
-versiones más recientes de Perl 5, y algunos módulos de Perl 5 le permiten usar 
-la sintaxis de Perl 6 en sus programas. Puede obtener más información sobre 
-Perl 6 en http://dev.perl.org/perl6/.
+Perl 6 es la siguiente versión principal de Perl, pero no es un sustituto de
+Perl 5. Su sintaxis y su diseño aún están en fase de desarrollo. El trabajo se
+inició en 2002 y sigue en curso. Algunas de las características más
+interesantes de Perl 6 se han incluido en las versiones más recientes de Perl
+5, y algunos módulos de Perl 5 le permiten usar la sintaxis de Perl 6 en sus
+programas. Actualmente la implementación más avanzada de Perl 6 es Rakudo (
+http://rakudo.org ).
 
 En L<perlhist> encontrará el historial de revisiones de Perl.
 
-=head2 ¿Qué era Ponie?
+=head2 ¿Qué es Ponie?
 
 (contribución de brian d foy)
 
@@ -216,9 +219,9 @@ le costará adaptarse.
 La mayoría de las tareas sólo requieren conocer un pequeño subconjunto del
 lenguaje Perl. Uno de los lemas que dirigen el desarrollo de Perl es "se puede
 hacer de varias maneras", que es la traducción de "there's more than one way to
-do it" (o TMTOWTDI, pronunciado "tim toady"). Así, la curva de aprendizaje de
-Perl tiene una pendiente suave (es fácil de aprender) y larga (si desea seguir
-profundizando, puede aprender a hacer muchas cosas).
+do it" (o TMTOWTDI, que en inglés se pronuncia como "tim toady"). Así, la curva
+de aprendizaje de Perl tiene una pendiente suave (es fácil de aprender) y larga
+(si desea seguir profundizando, puede aprender a hacer muchas cosas).
 
 Por último, como Perl es frecuentemente un lenguaje interpretado (aunque no
 siempre y, desde luego, no por definición), puede escribir sus programas y
@@ -285,9 +288,9 @@ make).
 Por diversos motivos, es probable que Perl no sea adecuado para sistemas
 incrustados en tiempo real, trabajo de desarrollo de sistemas operativos a bajo
 nivel, como controladores de dispositivos o código de cambio de contexto de
-subprocesos, aplicaciones complejas de memoria compartida y múltiples
-subprocesos, o aplicaciones extremadamente grandes. Notará que perl no está 
-programado en Perl.
+hilos de ejecución, aplicaciones complejas de memoria compartida y múltiples
+hilos de ejecución, o aplicaciones extremadamente grandes. Notará que perl no
+está programado en Perl.
 
 En esencia, Perl es un lenguaje de tipos dinámicos, no de tipos estáticos.
 Nadie le reprochará que no lo utilice para desarrollar código de control de

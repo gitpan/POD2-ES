@@ -41,8 +41,8 @@ Es posible que tenga que leer esta sección varias veces...
 
 B<Unicode> es un juego de caracteres en el que caben muchos caracteres. El
 valor ordinal de un carácter se denomina B<código de carácter> (I<code point>).
-En la práctica, la distinción entre los conceptos de código de carácter y 
-carácter es difusa, por lo que se suelen utilizar ambos términos 
+En la práctica, la distinción entre los conceptos de código de carácter y
+carácter es difusa, por lo que se suelen utilizar ambos términos
 indistintamente.
 
 Hay muchísimos códigos de carácter, pero el hardware trabaja con bytes, y un
@@ -191,12 +191,11 @@ Después de leer este documento, debe leer L<perlunifaq>.
 
 =head1 AGRADECIMIENTOS
 
-Deseo expresar mi agradecimiento a las siguientes personas:
-
-Johan Vromans de Squirrel Consultancy. Sus diatribas contra UTF-8 en las
-reuniones de los Amsterdam Perl Mongers hicieron que me interesara por el tema
-y me propusiera aprender a utilizar de una manera segura las codificaciones de
-caracteres en Perl.
+Deseo expresar mi agradecimiento a las siguientes personas: Johan Vromans de
+Squirrel Consultancy. Sus diatribas contra UTF-8 en las reuniones de los
+Amsterdam Perl Mongers hicieron que me interesara por el tema y me propusiera
+aprender a utilizar de una manera segura las codificaciones de caracteres en
+Perl.
 
 Gerard Goossen de TTY. Su presentación "UTF-8 in the wild" (Dutch Perl Workshop
 2006) me sirvió de inspiración para publicar mis ideas y escribir este
@@ -218,7 +217,6 @@ Juerd Waalboer <#####@juerd.nl>
 L<perlunifaq>, L<perlunicode>, L<perluniintro>, L<Encode>
 
 
-
 =head1 TRADUCTORES
 
 =over
@@ -228,3 +226,4 @@ L<perlunifaq>, L<perlunicode>, L<perluniintro>, L<Encode>
 =item * Enrique Nell (Language Lead), C< blas.gordon + POD2ES at gmail.com >
 
 =back
+
