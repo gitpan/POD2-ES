@@ -4,7 +4,7 @@ use strict;
 
 use base 'POD2::Base';
 
-our $VERSION = '5.14.1.02';
+our $VERSION = '5.14.1.03';
 
 sub search_perlfunc_re {
     return 'Lista de funciones de Perl en orden alfabético';
@@ -13,6 +13,7 @@ sub search_perlfunc_re {
 sub pod_info {{
     perl        => '5.14.1',
     perlbook    => '5.14.1',
+    perlcheat   => '5.14.1',
     #perldata    => '5.14.1',
     perlfaq1    => '5.14.1',
     perlintro   => '5.14.1',
@@ -21,7 +22,6 @@ sub pod_info {{
     perlutil    => '5.14.1',
     'README.freebsd'  => '5.14.1',
     'README.openbsd'  => '5.14.1',
-    # perlcheat  => '5.14.1',
     # perlfunc   => '5.14.1',
     # perlstyle  => '5.14.1',
     # perlsyn    => '5.14.1',

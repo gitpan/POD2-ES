@@ -1,6 +1,12 @@
 Revision history for Perl extension POD2::ES
 
 
+5.14.1.03  July 18, 2011
+
+           * Added the translation of perlcheat.pod
+           * Fixed issue in META.yml
+           * Fixed formatting issue in perlnumber.pod
+
 5.14.1.02  July 17, 2011
 
            * Added the translation of perlnumber.pod
