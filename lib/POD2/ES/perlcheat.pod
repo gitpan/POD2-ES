@@ -22,7 +22,7 @@ abarca todo, pero incluye 195 características del lenguaje; no es mal comienzo.
   []    ref. array anónimo    ${$$foo[1]}[2] equivale a $foo->[1]->[2]
   {}    ref. hash anónimo     ${$$foo[1]}[2] equivale a $foo->[1][2]
   \()   lista referencias
-                          NÚMEROS  CADENAS     VÍNCULOS
+                          NÚMEROS  CADENAS         VÍNCULOS
   PRIORIDAD OPERADORES      =          =           perl.plover.com
   ->                        +          .           search.cpan.org
   ++ --                   == !=      eq ne         cpan.org
@@ -75,11 +75,12 @@ abarca todo, pero incluye 195 características del lenguaje; no es mal comienzo.
 =head1 AGRADECIMIENTOS
 
 La primera versión de este documento se publicó en Perl Monks, donde muchas
-personas realizaron útiles sugerencias. Gracias, Perl Monks. Debemos un
-agradecimiento especial a Damian Conway, quien no sólo sugirió importantes
-cambios, sino que también se entretuvo en contar el número de características
-incluidas y creó una versión para Perl 6 con el fin de demostrar que Perl
-seguirá siendo Perl.
+personas realizaron útiles sugerencias. Gracias, Perl Monks. 
+
+Debemos un agradecimiento especial a Damian Conway, quien no sólo sugirió 
+importantes cambios, sino que también se entretuvo en contar el número de 
+características incluidas y creó una versión para Perl 6 con el fin de 
+demostrar que Perl seguirá siendo Perl.
 
 =head1 AUTOR
 

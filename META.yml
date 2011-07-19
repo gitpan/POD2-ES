@@ -1,24 +1,24 @@
---- #YAML:1.0
-name:               POD2-ES
-version:            5.14.1.03
-abstract:           Documentación de Perl en español
+---
+abstract: 'Documentación de Perl en español'
 author:
-    - Equipo de Perl en Español
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Equipo de Perl en Español'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    POD2::Base:    0.043
-    Pod::Perldoc:  3.15
-    Test::More:    0
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+  ExtUtils::MakeMaker: 0
+configure_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.58, CPAN::Meta::Converter version 2.110930'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: POD2-ES
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  POD2::Base: 0.043
+  Pod::Perldoc: 3.15
+  Test::More: 0
+version: v5.14.1.04
