@@ -1,7 +1,7 @@
 ---
-abstract: 'Documentación de Perl en español'
+abstract: 'DocumentaciÃ³n de Perl en espaÃ±ol'
 author:
-  - 'Equipo de Perl en Español'
+  - 'Equipo de Perl en EspaÃ±ol'
 build_requires:
   ExtUtils::MakeMaker: 0
 configure_requires:
@@ -21,4 +21,4 @@ requires:
   POD2::Base: 0.043
   Pod::Perldoc: 3.15
   Test::More: 0
-version: v5.14.1.04
+version: v5.14.1.05

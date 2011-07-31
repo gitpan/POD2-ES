@@ -1,7 +1,7 @@
 {
-   "abstract" : "Documentación de Perl en español",
+   "abstract" : "DocumentaciÃ³n de Perl en espaÃ±ol",
    "author" : [
-      "Equipo de Perl en Español"
+      "Equipo de Perl en EspaÃ±ol"
    ],
    "dynamic_config" : 1,
    "generated_by" : "ExtUtils::MakeMaker version 6.58, CPAN::Meta::Converter version 2.110930",
@@ -39,5 +39,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "v5.14.1.04"
+   "version" : "v5.14.1.05"
 }
