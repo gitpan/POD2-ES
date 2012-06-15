@@ -105,7 +105,7 @@ Es probable que desee tener estas referencias a mano:
 
 	James Lee
 	ISBN 1-59059-391-X [3ª edición - Abril de 2010]
-	http://www.apress.com/book/view/1430227931
+	http://www.apress.com/9781430227939
 
 =item I<Learning Perl>
 
@@ -142,7 +142,7 @@ Es probable que desee tener estas referencias a mano:
 
 	Sam Tregar
 	ISBN 1-59059-018-X [1ª edición - Agosto de 2002]
-	http://www.apress.com/book/view/159059018X
+	http://www.apress.com/9781590590188
 
 =item I<The Perl Cookbook>
 
@@ -150,7 +150,6 @@ Es probable que desee tener estas referencias a mano:
 	    con prólogo de Larry Wall
 	ISBN 1-56592-243-3 [2ª edición - Agosto de 2003]
 	http://oreilly.com/catalog/9780596003135
-
 
 =item I<Automating System Administration with Perl>
 
@@ -162,7 +161,7 @@ Es probable que desee tener estas referencias a mano:
 
 	Linchi Shea
 	ISBN 1-59059-097-X [1ª edición - Julio de 2003]
-	http://www.apress.com/book/view/159059097X
+	http://www.apress.com/9781590590973
 
 =back
 
@@ -241,7 +240,7 @@ Es probable que desee tener estas referencias a mano:
 
 	Richard Foley con Andy Lester
 	ISBN 1-59059-454-1 [1ª edición - Julio de 2005]
-	http://www.apress.com/book/view/1590594541
+	http://www.apress.com/9781590594544
 
 =back
 
@@ -251,13 +250,10 @@ Algunos de estos libros están disponibles como descargas gratuitas:
 
 I<Higher-Order Perl>: http://hop.perl.plover.com/
 
-I<Writing Perl Modules for CPAN>:
-http://www.apress.com/resource/freeebook/9781590590188
-
 =head2 Otros libros interesantes (no específicos de Perl)
 
 Es posible que encuentre varios conceptos de Perl familiares en esta colección
-de artículos de la ACM escritos por Jon Bentley. La similitud con el título de
+de artículos de la ACM escritos por Jon Bentley. La similitud con el título del
 libro principal de Perl (que se publicó posteriormente) no es totalmente
 accidental:
 
@@ -301,7 +297,7 @@ póngase en contacto con nosotros.
 
 =over
 
-=item * Joaquín Ferrero (Tech Lead), C< explorer + POD2ES at joaquinferrero.com >
+=item * Joaquí­n Ferrero (Tech Lead), C< explorer + POD2ES at joaquinferrero.com >
 
 =item * Enrique Nell (Language Lead), C< blas.gordon + POD2ES at gmail.com >
 
