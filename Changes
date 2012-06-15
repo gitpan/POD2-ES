@@ -1,5 +1,9 @@
 Revision history for Perl extension POD2::ES
 
+5.16.0.02  June 15, 2012
+
+           * Removed '=encoding utf8' command from perlboot.pod, 
+             perlbot.pod, perltooc.pod, and perltoot.pod
 
 5.16.0.01  June 14, 2012
 
