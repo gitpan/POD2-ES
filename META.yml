@@ -21,4 +21,4 @@ requires:
   POD2::Base: 0.043
   Pod::Perldoc: 3.15
   Test::More: 0
-version: v5.16.0.06
+version: v5.16.0.07
