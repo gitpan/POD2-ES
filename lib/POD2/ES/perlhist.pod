@@ -31,7 +31,8 @@ Jarkko Hietaniemi, Hugo van der Sanden, Michael Schwern, Rafael Garcia-Suarez,
 Nicholas Clark, Richard Clamp, Leon Brocard, Dave Mitchell, Jesse Vincent,
 Ricardo Signes, Steve Hay, Matt S Trout, David Golden, Florian Ragwitz,
 Tatsuhiko Miyagawa, Chris C<BinGOs> Williams, Zefram, Ævar Arnfjörð
-Bjarmason, Stevan Little, Dave Rolsky, Max Maischein y Abigail.
+Bjarmasonn, Stevan Little, Dave Rolsky, Max Maischein, Abigail, Jesse Luehrs y
+Tony Cook.
 
 =head2 ¿CALABAZA?
 
@@ -46,7 +47,7 @@ pero ninguno despertaba entusiasmo. Un día, Chip preguntó:
 
 <cita>
 
-   ¿Quién tiene la calabaza de revisiones?
+   ¿Quién tiene la calabaza de parches?
 
 Esto merece una explicación: David Croy me contó que en un trabajo anterior
 tenían una unidad de cinta y varios sistemas que la usaban para realizar
@@ -72,20 +73,20 @@ ser el que mueve los hilos?).
                                          en Changes*)
  ======================================================================
 
- Larry   0              Confidencial.   No pregunte.
+ Larry    0             Confidencial.   No pregunte.
 
- Larry   1.000          1987-Dic-18
+ Larry    1.000         1987-Dic-18
 
           1.001..10     1988-Ene-30
           1.011..14     1988-Feb-02
  Schwern  1.0.15        2002-Dic-18     Modernización
  Richard  1.0_16        2003-Dic-18
 
- Larry   2.000          1988-Jun-05
+ Larry    2.000         1988-Jun-05
 
           2.001         1988-Jun-28
 
- Larry   3.000          1989-Oct-18
+ Larry    3.000         1989-Oct-18
 
           3.001         1989-Oct-26
           3.002..4      1989-Nov-11
@@ -104,7 +105,7 @@ ser el que mueve los hilos?).
           3.042..43     1991-Ene-??
           3.044         1991-Ene-12
 
- Larry   4.000          1991-Mar-21
+ Larry    4.000         1991-Mar-21
 
           4.001..3      1991-Abr-12
           4.004..9      1991-Jun-07
@@ -175,7 +176,7 @@ ser el que mueve los hilos?).
           5.000n        1995-Mar-07
           5.000o        ¿1995-Mar-13?
 
- Larry   5.001          1995-Mar-13
+ Larry    5.001         1995-Mar-13
 
  Andy     5.001a        1995-Mar-15
           5.001b        1995-Mar-31
@@ -263,7 +264,7 @@ ser el que mueve los hilos?).
           p54rc1        1997-May-12     Candidatas a versión final.
           p54rc2        1997-May-14
 
- Chip    5.004          1997-May-15     Versión de mantenimiento importante.
+ Chip     5.004         1997-May-15     Versión de mantenimiento importante.
 
  Tim      5.004_01-t1   1997-???-??     Serie de mantenimiento de v5.004.
           5.004_01-t2   1997-Jun-11     alias perl5.004m1t2
@@ -482,7 +483,14 @@ ser el que mueve los hilos?).
  Ricardo  5.16.0-RC0    2012-May-10
  Ricardo  5.16.0-RC1    2012-May-14
  Ricardo  5.16.0-RC2    2012-May-15
- Ricardo  5.16.0        2012-May-20
+
+ Ricardo  5.16.0        2012-May-20     Serie de mantenimiento de v5.16
+ Ricardo  5.16.1-RC1    2012-Ago-03
+ Ricardo  5.16.1        2012-Ago-08
+
+ Zefram   5.17.0        2012-May-26     Serie de desarrollo de v5.17
+ Jesse L  5.17.1        2012-Jun-20
+ TonyC    5.17.2        2012-Jul-20
 
 =head2 TAMAÑOS DE VERSIÓN SIGNIFICATIVOS
 
@@ -863,9 +871,9 @@ algunas versiones más significativas.
  win32        1841   73  1841   73
  x2p           345   19   345   19
 
-=head2 TAMAÑOS DE REVISIÓN SIGNIFICATIVOS
+=head2 TAMAÑOS DE PARCHE SIGNIFICATIVOS
 
-"dif. líneas en kB" significa que, por ejemplo, para la revisión 5.003_08,
+"dif. líneas en kB" significa que, por ejemplo, para el parche 5.003_08,
 que se aplicó a la versión 5.003_07 (o lo que hubiera antes de la versión
 5.003_08), se agregaron 110 kilobytes de líneas, se quitaron 19 kilobytes de
 líneas y se modificaron 424 kilobytes de líneas. Solo se cuentan las líneas,
@@ -929,14 +937,14 @@ en contexto de diff(1).
           5.004_03      1997-Sep-05     109     0    17
           5.004_04      1997-Oct-15      66     8   173
 
-=head3 Una era sin revisiones
+=head3 Una era sin parches
 
 En tiempos recientes, las versiones con nombre ya no son tan frecuentes, y como
 se puede seguir el progreso de forma (casi) instantánea (con rsync, y con git
-desde finales de 2008), ya no se proporcionan revisiones entre versiones. Sin
-embargo, esto no nos impide calcular cuánto hubiera ocupado una revisión. Se
+desde finales de 2008), ya no se proporcionan parches entre versiones. Sin
+embargo, esto no nos impide calcular cuánto hubiera ocupado un parche. Se
 indica en la tabla siguiente. A menos que se indique lo contrario, el tamaño
-mencionado es el de la revisión que pasa de la versión x.y.z a la x.y.z+1.
+mencionado es el del parche que pasa de la versión x.y.z a la x.y.z+1.
 
  Sarathy  5.6.1         2001-Abr-08     531    44   651
  Rafael   5.6.2         2003-Nov-15      20    11  1819
@@ -971,7 +979,7 @@ Estamos agradecidos a la memoria colectiva de la comunidad Perl. Además de los
 titulares de la calabaza, también enviaron correcciones y adiciones Alan
 Champion, Mark Dominus, Andreas KE<0xf6>nig, John Macdonald, Matthias
 Neeracher, Jeff Okamoto, Michael Peppler, Randal Schwartz y Paul D. Smith.
-Abigail agregó los datos sobre tamaño de archivos y revisiones
+Abigail agregó los datos sobre tamaño de archivos y parches
 correspondientes a la era 5.6.0 - 5.10.
 
 =cut
