@@ -6,7 +6,7 @@ use open ':locale';
 use base 'Exporter';
 use base 'POD2::Base';
 
-our $VERSION = '5.16.1.01';
+our $VERSION = '5.16.1.02';
 
 our @EXPORT = qw(print_pod print_pods);
 
